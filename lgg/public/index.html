@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Site Properties -->
-    <title>LGQM Generator</title>
+    <title>LGQM Generator 《临高启明》文本生成器</title>
     <link rel="stylesheet" href="semantic/dist/semantic.css">
 
     <style type="text/css">
@@ -107,6 +107,10 @@
                 font-size: 1.5em;
             }
         }
+
+        .generated-text {
+            white-space: pre-line;
+        }
     </style>
 </head>
 
@@ -116,33 +120,40 @@
         <div class="ui inverted vertical masthead center aligned segment">
             <div class="ui container">
                 <div class="ui large secondary inverted pointing tabular menu">
-                    <a class="item active" data-tab="generator">Generator</a>
-                    <a class="item" data-tab="about">About</a>
+                    <a class="item active" data-tab="generator">Generator 生成文本</a>
+                    <a class="item" data-tab="about">About 关于《临高》生成器</a>
                 </div>
             </div>
         </div>
 
         <div class="ui vertical stripe tab segment active" data-tab="generator">
             <div class="ui text container">
-                <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing
-                    by providing massive amounts of whitespace and generic content that can seem massive, monolithic and
-                    worth your attention.</p>
-                <a class="ui large button">Read More</a>
+                <h3 class="ui header">
+                    一年连载半日完，打下省市三个半<br>
+                    归化小民愁白头，主任写到哪一段？
+                </h3>
+                <p>
+                    萧主任比较健康，连载永远不够看。为了自己动手丰衣足食，用现有文本训练了个RNN神经网络，吐点东西出来聊以自慰<br>
+                    更多信息请参考<code>关于</code>部分
+                </p>
+                <div class="ui raised segment">
+                    <p class="generated-text">第65535节 ...</p>
+                </div>
+                <a class="ui large button generate-button">Generate 生成</a>
                 <h4 class="ui horizontal header divider">
-                    <a href="#">Case Studies</a>
+                    <a>一切荣耀归元老院</a>
                 </h4>
             </div>
         </div>
 
         <div class="ui vertical stripe tab segment" data-tab="about">
             <div class="ui text container">
-                <h3 class="ui header">TEST</h3>
-                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing
-                    by providing massive amounts of whitespace and generic content that can seem massive, monolithic and
-                    worth your attention.</p>
+                <h3 class="ui header">About 关于《临高》生成器</h3>
+                <p>使用的神经网络architecture见下：</p>
+                <script src="https://gist.github.com/boyangwang/56c8a35b06ea8cc40ff4689ece96ab1e.js"></script>
+                <p>训练于us-oregon AWS p2 instance，Tesla K80 GPU，Theano backend</p>
                 <h4 class="ui horizontal header divider">
-                    <a href="#">Case Studies</a>
+                    <a>一切荣耀归元老院</a>
                 </h4>
             </div>
         </div>
@@ -153,10 +164,11 @@
                     <div class="center aligned wide column">
                         <h4 class="ui inverted header">About</h4>
                         <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="#" class="item">Contact Us</a>
-                            <a href="#" class="item">Religious Ceremonies</a>
-                            <a href="#" class="item">Gazebo Plans</a>
+                            <a href="https://wangboyang.com" class="item" target="_blank">个人网站</a>
+                            <a href="https://github.com/boyangwang" class="item" target="_blank">GitHub</a>
+                            <a href="mailto:wangboyang1991@gmail.com" class="item" target="_top">
+                                邮箱
+                            </a>
                         </div>
                     </div>
                 </div>
