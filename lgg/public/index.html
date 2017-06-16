@@ -111,6 +111,11 @@
         .generated-text {
             white-space: pre-line;
         }
+
+        .segment.generated-text {
+            overflow-y: scroll;
+            max-height: 600px;
+        }
     </style>
 </head>
 
@@ -136,7 +141,7 @@
                     萧主任比较健康，连载永远不够看。为了自己动手丰衣足食，用现有文本训练了个RNN神经网络，吐点东西出来聊以自慰<br>
                     更多信息请参考<code>关于</code>部分
                 </p>
-                <div class="ui raised segment">
+                <div class="ui raised segment generated-text">
                     <p class="generated-text">第65535节 ...</p>
                 </div>
                 <a class="ui large button generate-button">Generate 生成</a>
