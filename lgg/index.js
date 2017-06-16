@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const app = express();
 
@@ -30,10 +32,18 @@ const tempText = `第65535节 进来，不问可是对他们不满会在那个�
     “这是见之前，多精人心腹。”高青递道儿女，有时候你就看起来了，又命仆四巧匠难，推到心里排运运。他的小白也不象高青，看这个目当算安静。萧子山看得叫高家的话，一直无论在回启宅。
 
     萧子山点点头，早他的方砖问情整个一次破动悠久，佛郎机人每能进来。`;
+const gen_text_path = path.join(__dirname, '/../data/generated_text');
+let texts = [];
+fs.readdir(gen_text_path, function(err, files) {
+    texts = files;
+});
 
 app.use(express.static('public'));
 app.get('/getGeneratedText', function(req, res) {
-    res.status(200).json({text: tempText});
+    let text = texts[Math.floor(Math.random() * texts.length)];
+    fs.readFile(path.join(gen_text_path, text), 'utf8', function(err, data) {
+        res.status(200).json({text: data});
+    });
 });
 
 app.listen(3000, function () {
