@@ -38,8 +38,8 @@ fs.readdir(gen_text_path, function(err, files) {
     texts = files;
 });
 
-app.use(express.static('public'));
-app.get('/getGeneratedText', function(req, res) {
+app.use('/lgg', express.static('public'));
+app.get('/lgg/getGeneratedText', function(req, res) {
     let text = texts[Math.floor(Math.random() * texts.length)];
     fs.readFile(path.join(gen_text_path, text), 'utf8', function(err, data) {
         res.status(200).json({text: data});
