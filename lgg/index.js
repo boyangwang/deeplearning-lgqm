@@ -46,6 +46,6 @@ app.get('/getGeneratedText', function(req, res) {
     });
 });
 
-app.listen(3000, function () {
-    console.log('xxx listening on port 3000');
+app.listen(14407, function () {
+    console.log('xxx listening on port 14407');
 });
