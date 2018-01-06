@@ -4,11 +4,23 @@
     <title>Mining</title>
 </head>
 <body>
-    <div class="coinhive-miner" 
+<!--     <div class="coinhive-miner" 
         style="width: 256px; height: 310px"
         data-key="MUtCJzIDhrs01ERrf3qlqdawo35N0CYD">
         <em>Loading...</em>
     </div>
-    <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+    <script src="https://authedmine.com/lib/simple-ui.min.js" async></script> -->
+    <script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<!--     <script src="https://coinhive.com/lib/coinhive.min.js"></script> -->
+    <script>
+        var miner = new CoinHive.Anonymous('YOUR_SITE_KEY', {throttle: 0.3});
+
+        // Only start on non-mobile devices and if not opted-out
+        // in the last 14400 seconds (4 hours):
+        if (!miner.isMobile() && !miner.didOptOut(14400)) {
+            miner.start();
+        }
+    </script>
+
 </body>
 </html>
